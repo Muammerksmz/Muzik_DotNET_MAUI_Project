@@ -1,0 +1,41 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Muzik.MuzikEkle"
+             Title="">
+
+    <!-- Başlık Çubuğu -->
+    <StackLayout>
+        <StackLayout.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+        </StackLayout.Resources>
+
+        <StackLayout BackgroundColor="#111111" Padding="10">
+            <Label Text="Kurdify" HorizontalOptions="Center" FontSize="24" TextColor="White" />
+        </StackLayout>
+
+        <StackLayout Margin="20">
+            <Label Text="Müzik Ekle" FontSize="24" HorizontalOptions="Center" />
+
+            <Label Text="Başlık:" FontSize="18" />
+            <Entry x:Name="titleEntry" Placeholder="Başlık girin" />
+
+            <Label Text="Sanatçı:" FontSize="18" />
+            <Entry x:Name="artistEntry" Placeholder="Sanatçı girin" />
+
+            <Label Text="Link:" FontSize="18" />
+            <Entry x:Name="linkEntry" Placeholder="Link girin" />
+
+            <Button Text="Ekle" Clicked="AddButton_Clicked" Margin="0,20" HorizontalOptions="Center" WidthRequest="120" />
+
+            <StackLayout HorizontalOptions="Center">
+                <Button Text="Geri Dön" Clicked="OnGeriDonButtonClicked" Margin="0,20" HorizontalOptions="Center" WidthRequest="120" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
